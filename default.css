@@ -289,23 +289,28 @@ h6 { font-size: 16px;}
 }
 .project-container {
     display: flex;
-    justify-content: center; /* Center the flexbox horizontally */
-    align-items: center; /* Center the flexbox vertically */
+    justify-content: space-evenly; /* Center items horizontally with equal space between them */
+    align-items: center; /* Center items vertically */
     flex-wrap: wrap;
 }
 
 .project {
-    width: 48%; /* Adjust width as needed */
-    margin: 0 10px 20px 10px; /* Add margin for spacing between projects */
+    flex: 0 0 calc(33.33% - 20px); /* Three items per row with a little space between them */
+    margin: 0 10px 20px 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
+
 @media screen and (max-width: 1200px){
 	.main-container{
 		width: 95%;
 	}
+	.project {
+        flex: 0 0 calc(50% - 20px); /* Two items per row on smaller screens */
+    }
 }
 @media screen and (max-width: 800px){
 	.intro-wrapper{
@@ -319,4 +324,7 @@ h6 { font-size: 16px;}
 	.right-column{
 		justify-content: center;
 	}
+	.project {
+        flex: 0 0 calc(100% - 20px); /* One item per row on even smaller screens */
+    }
 }
