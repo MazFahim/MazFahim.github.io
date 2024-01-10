@@ -289,17 +289,18 @@ h6 { font-size: 16px;}
 }
 .project-container {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: center; /* Center the flexbox horizontally */
+    align-items: center; /* Center the flexbox vertically */
     flex-wrap: wrap;
 }
 
 .project {
     width: 48%; /* Adjust width as needed */
-    padding: 15px;
-    margin-bottom: 20px;
+    margin: 0 10px 20px 10px; /* Add margin for spacing between projects */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
 }
 @media screen and (max-width: 1200px){
 	.main-container{
