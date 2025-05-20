@@ -244,6 +244,9 @@ h6 { font-size: 16px;}
 	justify-content: space-evenly;
 	background-color: var(--previewShadow);
 }
+#skills p{
+	font-weight: bold;
+}
 .social-links{
 	display: grid;
 	align-content: center;
@@ -300,8 +303,9 @@ h6 { font-size: 16px;}
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 10px;
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
+	height: 300px;
 }
 
 @media screen and (max-width: 1200px){
@@ -325,6 +329,6 @@ h6 { font-size: 16px;}
 		justify-content: center;
 	}
 	.project {
-        flex: 0 0 calc(100% - 20px); /* One item per row on even smaller screens */
+        flex: 0 0 calc(100% - 20px); 
     }
 }
