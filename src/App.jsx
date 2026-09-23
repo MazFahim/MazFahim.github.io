@@ -4,10 +4,23 @@ import Identity from './components/Identity.jsx'
 import StatusLine from './components/StatusLine.jsx'
 import Highlights from './components/Highlights.jsx'
 import Nav from './components/Nav.jsx'
+import WorkTab from './components/WorkTab.jsx'
+import VenturesTab from './components/VenturesTab.jsx'
+import ShowcaseTab from './components/ShowcaseTab.jsx'
+import ResearchTab from './components/ResearchTab.jsx'
+import ContactTab from './components/ContactTab.jsx'
 
 function App() {
   const [activeTab, setActiveTab] = useState('work')
+  const tabComponents = {
+    work: WorkTab,
+    ventures: VenturesTab,
+    showcase: ShowcaseTab,
+    research: ResearchTab,
+    contact: ContactTab,
+  }
 
+  const ActiveTabComponent = tabComponents[activeTab]
   return (
     <>
       <Identity text="Full-stack developer and builder — Python/Django, .NET, and React — building the ventures I'm growing alongside them." />
@@ -24,7 +37,7 @@ function App() {
         ]}
       />
       <Nav activeTab={activeTab} onTabChange={setActiveTab} />
-      <p>Active tab: {activeTab}</p>
+      <ActiveTabComponent />
     </>
   )
 }

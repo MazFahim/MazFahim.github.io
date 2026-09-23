@@ -2,7 +2,7 @@ function Nav({ activeTab, onTabChange }) {
   const tabs = [
     { id: 'work', label: 'Work' },
     { id: 'ventures', label: 'Ventures' },
-    { id: 'labs', label: 'Open Source / Labs' },
+    { id: 'showcase', label: 'Open Source & Shop' },
     { id: 'research', label: 'Research & Teaching' },
     { id: 'contact', label: 'Contact' },
   ]
