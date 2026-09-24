@@ -37,7 +37,7 @@ function App() {
         ]}
       />
       <Nav activeTab={activeTab} onTabChange={setActiveTab} />
-      <ActiveTabComponent />
+      <ActiveTabComponent onNavigateToContact={() => setActiveTab('contact')} />
     </>
   )
 }
