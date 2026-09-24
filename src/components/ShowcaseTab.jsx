@@ -10,9 +10,9 @@ const openSourceProjects = [
 function ShowcaseTab() {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Open Source</h2>
+      <h2 className="text-2xl font-bold mb-4  pb-2">Open Source</h2>
       {openSourceProjects.map((project) => (
-        <div key={project.name} className="mb-6">
+        <div key={project.name} className="py-4 border-t border-hairline first:border-t-0 first:pt-0">
           <h3 className="text-lg font-semibold">{project.name}</h3>
           <p>{project.description}</p>
           <a href={project.link} target="_blank" className="text-blue-400 underline">

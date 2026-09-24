@@ -8,15 +8,15 @@ function Nav({ activeTab, onTabChange }) {
   ]
 
   return (
-    <nav className="flex gap-4">
+    <nav className="sticky top-0 bg-ink flex gap-6 border-b border-hairline py-3 z-10">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => onTabChange(tab.id)}
           className={
             activeTab === tab.id
-              ? 'font-bold text-blue-400'
-              : 'text-gray-400'
+              ? 'text-accent border-b-2 border-accent pb-1'
+              : 'text-muted hover:text-ink-text pb-1 transition-colors'
           }
         >
           {tab.label}

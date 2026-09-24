@@ -57,16 +57,18 @@ function WorkTab() {
   return (
     <div>
       <section>
-        <h2 className="text-2xl font-bold mb-4">Experience</h2>
+        <h2 className="text-2xl font-bold mb-4  pb-2 border-b border-hairline">Experience</h2>
         {experience.map((job) => (
           <div key={job.role} className="mb-6">
             <h3 className="text-lg font-semibold">{job.role}</h3>
             <p className="text-sm text-gray-400">
               {job.company} — {job.period}
             </p>
-            <ul className="list-disc list-inside mt-2">
+            <ul className="mt-2 space-y-1">
               {job.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
+                <li key={bullet} className="pl-4 border-l border-hairline text-ink-text/90">
+                  {bullet}
+                </li>
               ))}
             </ul>
           </div>
@@ -76,7 +78,7 @@ function WorkTab() {
       <section className="mt-8">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
         {projects.map((project) => (
-          <div key={project.name} className="mb-4">
+          <div key={project.name} className="py-4 border-t border-hairline first:border-t-0 first:pt-0">
             <h3 className="text-lg font-semibold">
               {project.name}{' '}
               <span className="text-sm text-gray-400">({project.status})</span>

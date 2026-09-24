@@ -16,9 +16,9 @@ const ventures = [
 function VenturesTab() {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Ventures</h2>
+      <h2 className="text-2xl font-bold mb-4 pb-2">Ventures</h2>
       {ventures.map((venture) => (
-        <div key={venture.name} className="mb-6">
+         <div key={venture.name} className="py-4 border-t border-hairline first:border-t-0 first:pt-0">
           <h3 className="text-lg font-semibold">
             {venture.name}{' '}
             <span className="text-sm text-gray-400">({venture.role})</span>

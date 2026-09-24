@@ -22,7 +22,7 @@ function ResearchTab({ onNavigateToContact }) {
   return (
     <div>
       <section>
-        <h2 className="text-2xl font-bold mb-4">Research</h2>
+        <h2 className="text-2xl font-bold mb-4  pb-2 border-b border-hairline">Research</h2>
         {research.map((item) => (
           <div key={item.title} className="mb-6">
             <h3 className="text-lg font-semibold">
@@ -37,9 +37,9 @@ function ResearchTab({ onNavigateToContact }) {
       <section className="mt-8">
         <h2 className="text-2xl font-bold mb-4">Teaching</h2>
         <p className="text-sm text-gray-400 mb-2">Instructor, Inquest</p>
-        <ul className="list-disc list-inside">
+        <ul className="space-y-1">
           {teaching.map((item) => (
-            <li key={item.course}>
+            <li key={item.course} className="pl-4 border-l border-hairline text-ink-text/90">
               {item.course} — {item.period}
             </li>
           ))}

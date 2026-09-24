@@ -22,7 +22,7 @@ function App() {
 
   const ActiveTabComponent = tabComponents[activeTab]
   return (
-    <>
+    <div className="max-w-3xl mx-auto px-6 py-12 space-y-6">
       <Identity text="Full-stack developer and builder — Python/Django, .NET, and React — building the ventures I'm growing alongside them." />
       <StatusLine
         status="Open to contract work, part-time work, and collaborations."
@@ -36,9 +36,12 @@ function App() {
           { label: 'Ventures building', value: '2' },
         ]}
       />
+      <a href="/CV_of_Ashiquzzaman_Fahim.pdf" download className="inline-block text-accent underline hover:opacity-80 transition-opacity">
+        Download CV ↓
+      </a>
       <Nav activeTab={activeTab} onTabChange={setActiveTab} />
       <ActiveTabComponent onNavigateToContact={() => setActiveTab('contact')} />
-    </>
+    </div>
   )
 }
 
