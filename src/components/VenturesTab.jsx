@@ -13,7 +13,7 @@ const ventures = [
   },
 ]
 
-function VenturesTab() {
+function VenturesTab({ onNavigateToContact}) {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4 pb-2">Ventures</h2>
@@ -26,6 +26,15 @@ function VenturesTab() {
           <p>{venture.description}</p>
         </div>
       ))}
+      <p className="mt-6">
+        Interested in collaborating on a venture?{' '}
+        <button
+          onClick={onNavigateToContact}
+          className="text-accent underline hover:opacity-80 transition-opacity"
+        >
+          Contact
+        </button>
+      </p>
     </div>
   )
 }

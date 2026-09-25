@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 import './App.css'
 import Identity from './components/Identity.jsx'
 import StatusLine from './components/StatusLine.jsx'
@@ -22,7 +23,7 @@ function App() {
 
   const ActiveTabComponent = tabComponents[activeTab]
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12 space-y-6">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-6">
       <Identity text="Full-stack developer and builder — Python/Django, .NET, and React — building the ventures I'm growing alongside them." />
       <StatusLine
         status="Open to contract work, part-time work, and collaborations."
@@ -31,8 +32,8 @@ function App() {
       <Highlights
         stats={[
           { label: 'Years experience', value: '3+' },
-          { label: 'Client companies', value: '800+' },
-          { label: 'APIs built', value: '30+' },
+          { label: 'Research projects', value: '2' },
+          { label: 'Open-source project', value: '1' },
           { label: 'Ventures building', value: '2' },
         ]}
       />
@@ -40,7 +41,17 @@ function App() {
         Download CV ↓
       </a>
       <Nav activeTab={activeTab} onTabChange={setActiveTab} />
-      <ActiveTabComponent onNavigateToContact={() => setActiveTab('contact')} />
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ActiveTabComponent onNavigateToContact={() => setActiveTab('contact')} />
+        </motion.div>
+      </AnimatePresence>
     </div>
   )
 }

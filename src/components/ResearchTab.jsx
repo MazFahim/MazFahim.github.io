@@ -50,7 +50,7 @@ function ResearchTab({ onNavigateToContact }) {
         Interested in research collaboration?{' '}
         <button
           onClick={onNavigateToContact}
-          className="text-blue-400 underline"
+          className="text-accent underline hover:opacity-80 transition-opacity"
         >
           Contact
         </button>
