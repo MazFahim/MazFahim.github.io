@@ -42,6 +42,7 @@ function ContactTab() {
       <div className="mt-6 text-sm text-muted">
         <p>Or reach me directly: <a href="mailto:mazfahim0@gmail.com" className="underline text-accent hover:opacity-80">mazfahim0@gmail.com</a></p>
         <p>WhatsApp: <a href="https://wa.me/8801521400144" target="_blank" className="underline text-accent hover:opacity-80">Chat on WhatsApp</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/ashiquzzaman-fahim-a401351a3" target="_blank" className="underline text-accent hover:opacity-80">Connect on LinkedIn</a></p>
       </div>
     </div>
   )
