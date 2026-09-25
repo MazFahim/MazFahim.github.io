@@ -6,9 +6,13 @@ function Identity({ text }) {
         alt="Ashiquzzaman Fahim"
         className="w-40 h-50 object-cover border border-hairline shrink-0"
       />
-      <p className="text-xl">
-        {text}
-      </p>
+      <div>
+        <h1 className="text-2xl font-bold text-ink-text">Ashiquzzaman Fahim</h1>
+        <p className="text-sm text-muted mt-1">
+          B.Sc. Computer Science & Engineering, CIU · Postgraduate Diploma in Business IT, BUET (ongoing)
+        </p>
+        <p className="text-xl mt-3">{text}</p>
+      </div>
     </div>
   )
 }
