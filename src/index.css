@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #10141F;
-  --color-surface: #171C2A;
-  --color-ink-text: #E7E9F0;
-  --color-muted: #8890A6;
-  --color-accent: #DDA34C;
-  --color-hairline: #2A3142;
+  --color-ink: #0B0F19;
+  --color-surface: #131927;
+  --color-surface-hover: #1A2234;
+  --color-ink-text: #F1F4F9;
+  --color-muted: #8E99AF;
+  --color-accent: #E5A84B;
+  --color-accent-hover: #F2B963;
+  --color-accent-subtle: rgba(229, 168, 75, 0.12);
+  --color-hairline: #222C3F;
+  --color-hairline-bright: #323F59;
 
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -17,8 +21,21 @@ body {
   background-color: var(--color-ink);
   color: var(--color-ink-text);
   font-family: var(--font-body);
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(229, 168, 75, 0.08), transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+  background-repeat: no-repeat, repeat, repeat;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: rgba(229, 168, 75, 0.3);
+  color: #fff;
 }
